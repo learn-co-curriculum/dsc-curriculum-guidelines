@@ -20,6 +20,21 @@ Each repository contains the following files (see template repositories below fo
 
 ## Lessons in repositories
 
+DOES
+
+
+IT 
+
+
+WORK
+
+
+NOT
+SURE
+
+
+HELLO
+
 ## Generating README.md from Jupyter 
 Notebooks
 
