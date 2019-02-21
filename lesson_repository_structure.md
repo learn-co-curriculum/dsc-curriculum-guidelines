@@ -16,7 +16,7 @@ Each repository contains the following files (see template repositories below fo
 - `CONTRIBUTING.md`
 - `LICENSE.md`
 - `index.ipynb`
-- `README.md` (This readme is being [generated using the Jupyter Notebook](https://github.com/learn-co-curriculum/dsc-curriculum-guidelines/blob/master/lesson_repository_structure.md#generating-readmemd-from-jupyter-notebooks).
+- `README.md` (This readme is being [generated using the Jupyter Notebook](#generating-readmemd-from-jupyter-notebooks).
 
 ## Lessons in repositories
 
