@@ -16,26 +16,13 @@ Each repository contains the following files (see template repositories below fo
 - `CONTRIBUTING.md`
 - `LICENSE.md`
 - `index.ipynb`
-- `README.md` (This readme is being [generated using the Jupyter Notebook](#generating-readmemd-from-jupyter-notebooks).
+- `README.md` (This readme is being [generated using the Jupyter Notebook](#generating-readmemd-from-jupyter-notebooks)).
 
-## Lessons in repositories
+## Readme
 
-DOES
+## Lab
 
-
-IT 
-
-
-WORK
-
-
-NOT
-SURE
-
-
-HELLO
-
-## Generating README.md from Jupyter 
+## Generating README.md from Jupyter Notebooks
 Notebooks
 
 
