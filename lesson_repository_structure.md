@@ -56,6 +56,14 @@ In terms of structure, a CodeAlong is identical to a Readme, but may contain mor
 
 ## Generating `README.md` from `index.ipynb`
 
-Notebooks
+How to generate `README.md` from `index.ipynb`? Using command line, just make sure you're in the right directory:
+
+`$ cd dsc-correct-directory`
+`$ jupyter nbconvert --to markdown index.ipynb && mv index.md README.md && git add -A && git commit -m "commit message"` 
+
+This will convert your index.ipynb to markdown AND give it the correct name AND will add and commit at the same time.
+
+
+
 
 
