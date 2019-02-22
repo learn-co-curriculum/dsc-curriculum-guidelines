@@ -23,7 +23,7 @@ Each repository contains the following files (see template repositories below fo
 - `README.md`
 - `images`-folder containing images (only if images are being used). Image file names should be *fully lower case (extension included)*.
 
-Your main working document will be the `index.ipynb`, which will contain the curriculum you create. You will later [convert the notebook into a markdown file](#generating-readmemd-from-jupyter-notebooks), the `README.md`.
+Your main working document will be the `index.ipynb`, which will contain the curriculum you create. You will later [convert the notebook into a markdown file](#generating-readmemd-from-indexipynb), the `README.md`.
 
 We'll discuss specifics for each lesson type below.
 
