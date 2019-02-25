@@ -60,9 +60,9 @@ How to generate `README.md` from `index.ipynb`? Using command line, just make su
 
 `$ cd dsc-correct-directory`
 
-`$ jupyter nbconvert --to markdown index.ipynb && mv index.md README.md && git add -A && git commit -m "commit message"` 
+Once you're in the right directory, copy the following command and change the commit message. This command will convert your index.ipynb to markdown, rename it to `readme.md`, and will add and commit at the same time.
 
-This will convert your index.ipynb to markdown AND give it the correct name AND will add and commit at the same time.
+`$ jupyter nbconvert --to markdown index.ipynb && mv index.md README.md && git add -A && git commit -m "commit message"` 
 
 
 
