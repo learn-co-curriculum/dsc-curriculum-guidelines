@@ -156,6 +156,7 @@ Use American quotation formatting: "Why"
 ### Math
 
 In markdown, we use LaTeX for mathematical expressions. Some guidelines:
+- Don't make screenshots of mathematical formulas to then be added in as .png/.jpg files. This makes maintenance of formulas very difficult.
 - Every mathematical expression or variable should be denoted in LaTeX-style format, even if what we are trying still makes sense when using the standard format.  
 **Do**: "We define $f(x)$ a function of $x$." **Don't**: "We define f(x) a function of x."
 - Use $\dfrac{}{}$ instead of $\frac{}{}$ to get fractions that don't look ridiculously small.
