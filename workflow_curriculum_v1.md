@@ -55,7 +55,22 @@ Note: We use bloom's taxonomy to define the depth of the content in a specific l
 
 ## Step 4: Updating Airtable
 
-## Step 5: Wrappin up a Section
+Airtable for curriculum V1 can be found [here](https://airtable.com/tblBxmAzJeLlm7iXV/viwHgTRCOuetiEKwK?blocks=hide).
+
+**IMPORTANT: Airtable is our reporting tool to our management. We want to keep it up-to-date on where we stand, because this is the only way for them to see our progress**
+
+Once a lesson is ready for V1, make sure to update airtable:
+
+- The Lesson name should be an **exact match** with the `index.ipynb` title
+- Status should be set to "To Review"
+- Make sure to review duration time and adjust if needed
+- Add in the new github repo URL
+- Select the appropriate *tag* (note: the tag universe is exhaustive, so no new tags can be added unless discussed. Tag wisely! One lesson should have 1-5 tags)
+- Copy over SWBATs from your jupyter notebooks: SWBATs in airtable should be **exact matches** of what's in the notebook
+- Add in the data set used in your lesson, if any. Check if the data set has been used before and select if it's in airtable already. If not, create a new data set
+- Note if there are images that need to be recreated by a designer: add tag "yes" or "no"
+
+## Step 5: Wrapping up a whole Section
 
 (Re)writing the section (or brick) intro and recap should always be the last thing a curriculum writer does when writing a section. 
 
