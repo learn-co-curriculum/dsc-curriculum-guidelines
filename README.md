@@ -1,6 +1,8 @@
-# dsc-curriculum-guidelines
+# Welcome to the Curriculum Guidelines Repository!
 
 This repository contains curriculum and style guidelines for the data science curriculum.
+
+To learn about the steps of the curriculum workflow for Curriculum V1, go [here](https://github.com/learn-co-curriculum/dsc-curriculum-guidelines/blob/master/workflow_curriculum_v1.md).
 
 To learn what lesson types exist and what our repository structures look like, go to the [repository structure documemtation](https://github.com/learn-co-curriculum/dsc-curriculum-guidelines/blob/master/lesson_repository_structure.md).
 
