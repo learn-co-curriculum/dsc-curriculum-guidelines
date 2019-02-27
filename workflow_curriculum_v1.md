@@ -3,7 +3,7 @@
 
 ## Step 1: Looking at the Curriculum Spreadsheet
 
-Once assigned a section or brick to work on, look at the curriculum spreadsheet to
+Once assigned a section or brick to work on, look at the [curriculum spreadsheet](https://docs.google.com/spreadsheets/d/1axi9lrt3boM5jt5EQakpNN9L3vAza6qoBi3YjXtDvGs/edit?usp=sharing) to
 
 1. See to what extent there are existing lessons
 2. Look at the "additional notes" column to look at the comments on what to change. In general, lines highlighted in blue denote that substantial changes are needed.
