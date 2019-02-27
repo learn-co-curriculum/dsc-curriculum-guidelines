@@ -36,7 +36,7 @@ If the answer to any of these questions is "no", bring this up in standup or tal
 
 ### Step 3.3: Editing a Lesson
 
-Next, make sure to review the and fix for the following main issues
+Next, make sure to review the lesson and fix for the following main issues
 
 1. Grammatical errors and typos: quick copy paste in a google doc should do the trick.
 2. Plagiarism: we are aware of some of our contents being exact copies of pre-existing websites/blogs. Make sure to do due diligence and check for that. Note: borrowed images can stay for now. Once we have an editor we will replace them. We will track images that need to be changed over in airtable (see [airtable section](https://github.com/learn-co-curriculum/dsc-curriculum-guidelines/blob/master/workflow_curriculum_v1.md#step-4-updating-airtable) below)
