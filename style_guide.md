@@ -107,6 +107,24 @@ import numpy as np
 train = pd.read_csv("C:/desktop/data/titanic.csv")
 ```
 
+~~~python
+# Import the necessary libraries
+import pandas as pd
+import numpy as np
+
+# Open a csv-file using pandas, and pass the path to the correct file 
+train = pd.read_csv("C:/desktop/data/titanic.csv")
+~~~
+
+~~~
+# Import the necessary libraries
+import pandas as pd
+import numpy as np
+
+# Open a csv-file using pandas, and pass the path to the correct file 
+train = pd.read_csv("C:/desktop/data/titanic.csv")
+~~~
+
 
 <a name="lists_and_bullets"></a>
 
@@ -198,7 +216,7 @@ import matplotlib.pyplot as plt
 ```
 The libraries stated above are used **very** often. You'll see that `pandas` will almost everywhere be imported as `pd`, `numpy` as `np`, etc. It is important to be consistent, because code like this will break:
 
-```
+```python
 pd.read_csv("C://anyfolder/anyfile.csv")
 ```
 when you simply use `import pandas` or name it differently. We encourage writers to be very consistent in naming libraries when importing them, and to make sure to do a quick check on what the naming conventions are when importing new (and less common) libraries. 
@@ -208,21 +226,17 @@ when you simply use `import pandas` or name it differently. We encourage writers
 
 ### Abbreviations
 
-Technological writing is full of initialisms, acronyms, and abbreviations. As our
+Data Science is full of initialisms, acronyms, and abbreviations. As our
 audience is quite likely to be unfamiliar with them, **any
 abbreviation may be used _only after it is introduced_**.
 
 Incorrect:
 
-```
-You can use AR to access the database...
-```
+" When performing EDA, it is important to handle missing data."
 
 Correct:
 
-```
-You can use ActiveRecord ('AR') to access the database...
-```
+"When performing Exploratory Data Analysis (EDA), it is important to handle missing data."
 
 <a name="capitalization"></a>
 
@@ -241,7 +255,6 @@ Don't capitalize:
 
 * *most acronyms:* CLI, URL, HTTP, LLDB.
 * *names of programming languages:* Python, Ruby, Objective-C, Swift, JavaScript
-* Interface Builder — Xcode's integrated storyboard design tool.
 <a name="asides"></a>
 
 In **headers**, capitalize *every* word except: "a," "an," "and," "at," "but," "by," "for," "in,"
@@ -349,7 +362,18 @@ Trustworthy, Useful, Transparent **over** Uninformed, Unhelpful, Overtly Salesy
 
 ### Personhood
 
-Curriculum should be writen in first-person plural (We).
+In order to write engaging curriculum the use of active voice: "you" (_active voice_) should be preferred over "we".
+
+Incorrect:
+
+"In the next section, we'll talk about decision trees"
+
+
+**Correct:**<br/>
+"In the next section, you'll learn about decision trees" <br/>
+OR <br/>
+"In the next section, you'll be introduced to decision trees"
+
 
 <a name="non-gendered_speech"></a>
 
