@@ -103,7 +103,7 @@ It is highly encouraged to use comments in your code blocks to provide guidance 
 import pandas as pd
 import numpy as np
 
-# Use the pandas method to open a csv-file along with the path to the correct file
+# Open a csv-file using pandas, and pass the path to the correct file 
 train = pd.read_csv("C:/desktop/data/titanic.csv")
 ```
 
