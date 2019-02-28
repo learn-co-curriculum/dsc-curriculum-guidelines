@@ -10,4 +10,4 @@ An extensive style guide can be found [here](https://github.com/learn-co-curricu
 
 To not confuse current batches of students, we create clones of existing repositories before altering them significantly. A new track will be created for curriculum V1. To learn how to make a copy for all branches purely using command line, go to our [Repository Cloning Document](https://github.com/learn-co-curriculum/dsc-curriculum-guidelines/blob/master/cloning_repositories.md).
 
-To copy your markdown text in juputer notebooks between branches, you can go here {Matts master merger comes here}.
+To copy your markdown text in juputer notebooks between branches, you can go here [here](markdown_merger.md).
