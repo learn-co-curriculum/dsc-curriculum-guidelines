@@ -13,6 +13,7 @@ Contents:
 * Formatting Markdown
   * [Code Words](#code_words)
   * [Code Blocks](#code_blocks)
+  * [Code Blocks Best Practices](#code_blocks_bp)
   * [Lists and Bullets](#lists_and_bullets)
   * [Tables](#tables)
   * [Quotes](#quotes)
@@ -64,8 +65,7 @@ Use [GitHub-flavored markdown][GHMD].
 ### Code Words
 
 When discussing a "code word" as part of a regular sentence, wrap the code word
-in single back ticks ( \` ). This could be a variable name (`myString`), a
-class name (`NSArray`), a method name (`.include?`), an operator (`<=>`), or a
+in single back ticks ( \` ). This could be a variable name (`myvariable`), a data set name (`mydata`), a method name (`.head()`), a function name (`mean()`) an operator (`>`,`=`), or a
 string literal (`"Hi, Grandma."`); in general, any piece of code that does not
 constitute a whole line or statement.
 
@@ -85,14 +85,28 @@ train = pd.read_csv("C:/desktop/data/titanic.csv")
 ```
 
 "Code blocks" are declared by wrapping in triple back-ticks ( ``` ). The
-opening triple back-tick should be followed with a language declaration
-appropriate to the contents of the code block:
+opening triple back-tick should be followed with the language declaration
+so the code inside the backticks has the correct color code:
 
 * `python`: Python
 * `bash` : Bash, CLI output
-* `ruby` : Ruby
 * `js`   : JavaScript
-* (none) : LLDB console output
+
+<a name="code_blocks_bp"></a>
+
+### Code Blocks Best Practices
+
+It is highly encouraged to use comments in your code blocks to provide guidance on what the code is about. This is especially helpful when introducing code which hasn't been used before.
+
+```python
+# Import the necessary libraries
+import pandas as pd
+import numpy as np
+
+# Use the pandas method to open a csv-file along with the path to the correct file
+train = pd.read_csv("C:/desktop/data/titanic.csv")
+```
+
 
 <a name="lists_and_bullets"></a>
 
