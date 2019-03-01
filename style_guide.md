@@ -13,6 +13,7 @@ Contents:
 * Formatting Markdown
   * [Code Words](#code_words)
   * [Code Blocks](#code_blocks)
+  * [Code Blocks Best Practices](#code_blocks_bp)
   * [Lists and Bullets](#lists_and_bullets)
   * [Tables](#tables)
   * [Quotes](#quotes)
@@ -20,6 +21,7 @@ Contents:
 * Style
   * [Python Style Guide](#python_style)
   * [Python Libraries](#python_libraries)
+  * [Introducing New Functions or Methods](#new_functions)
   * [Abbreviations](#abbreviations)
   * [Capitalization](#capitalization)
   * [Asides](#asides)
@@ -64,8 +66,7 @@ Use [GitHub-flavored markdown][GHMD].
 ### Code Words
 
 When discussing a "code word" as part of a regular sentence, wrap the code word
-in single back ticks ( \` ). This could be a variable name (`myString`), a
-class name (`NSArray`), a method name (`.include?`), an operator (`<=>`), or a
+in single back ticks ( \` ). This could be a variable name (`myvariable`), a data set name (`mydata`), a method name (`.head()`), a function name (`mean()`) an operator (`>`,`=`), or a
 string literal (`"Hi, Grandma."`); in general, any piece of code that does not
 constitute a whole line or statement.
 
@@ -73,6 +74,22 @@ Avoid beginning a new sentence with a code word whenever possible
 
 Not: `pwd` means "print working directory".  
 Use: The `pwd` command means "print working directory".  
+
+Do not use capitals in your variable names, and use underscores as a word separator.
+
+Incorrect: 
+
+```python
+MeanX = mean(x)
+LoanData = pd.read_csv("loandata.csv")
+```
+ 
+ Instead, do:
+
+```python
+mean_x = mean(x)
+loan_data = pd.read_csv("loandata.csv")
+```
 
 <a name="code_blocks"></a>
 
@@ -85,14 +102,27 @@ train = pd.read_csv("C:/desktop/data/titanic.csv")
 ```
 
 "Code blocks" are declared by wrapping in triple back-ticks ( ``` ). The
-opening triple back-tick should be followed with a language declaration
-appropriate to the contents of the code block:
+opening triple back-tick should be followed with the language declaration
+so the code inside the backticks has the correct color code:
 
 * `python`: Python
 * `bash` : Bash, CLI output
-* `ruby` : Ruby
 * `js`   : JavaScript
-* (none) : LLDB console output
+
+<a name="code_blocks_bp"></a>
+
+### Code Blocks Best Practices
+
+It is highly encouraged to use comments in your code blocks to provide guidance on what the code is about. This is especially helpful when introducing code which hasn't been used before.
+
+```python
+# Import the necessary libraries
+import pandas as pd
+import numpy as np
+
+# Open a csv-file using pandas, and pass the path to the correct file 
+train = pd.read_csv("C:/desktop/data/titanic.csv")
+```
 
 <a name="lists_and_bullets"></a>
 
@@ -184,31 +214,46 @@ import matplotlib.pyplot as plt
 ```
 The libraries stated above are used **very** often. You'll see that `pandas` will almost everywhere be imported as `pd`, `numpy` as `np`, etc. It is important to be consistent, because code like this will break:
 
-```
+```python
 pd.read_csv("C://anyfolder/anyfile.csv")
 ```
 when you simply use `import pandas` or name it differently. We encourage writers to be very consistent in naming libraries when importing them, and to make sure to do a quick check on what the naming conventions are when importing new (and less common) libraries. 
+
+<a name="new_functions"></a>
+
+### Introducing New Functions or Methods
+Whenever introducing new code, formally introducing these functions with their most commonly used arguments is encouraged. For example:
+
+To open a .csv-file you can use the pandas-function:
+
+```python
+read_csv(filepath, sep=', ', header='infer', index_col=None)
+```
+Where
+
+`filepath` -- denotes the path to the file (could be "C://anyfolder/anyfile.csv", "anyfile.csv", ...) <br/>
+`sep` -- The separator used in your csv-file <br/>
+`header` -- Row number to use as the column name. Default value 'infer' infers column names from the rist line of the file, which is identical to `header=0` <br/>
+`index_col` -- Column to use as the row labels of the DataFrame
+
+ for a full list of arguments, see [`read_csv()` documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html).
 
 
 <a name="abbreviations"></a>
 
 ### Abbreviations
 
-Technological writing is full of initialisms, acronyms, and abbreviations. As our
+Data Science is full of initialisms, acronyms, and abbreviations. As our
 audience is quite likely to be unfamiliar with them, **any
 abbreviation may be used _only after it is introduced_**.
 
 Incorrect:
 
-```
-You can use AR to access the database...
-```
+" When performing EDA, it is important to handle missing data."
 
 Correct:
 
-```
-You can use ActiveRecord ('AR') to access the database...
-```
+"When performing Exploratory Data Analysis (EDA), it is important to handle missing data."
 
 <a name="capitalization"></a>
 
@@ -227,7 +272,6 @@ Don't capitalize:
 
 * *most acronyms:* CLI, URL, HTTP, LLDB.
 * *names of programming languages:* Python, Ruby, Objective-C, Swift, JavaScript
-* Interface Builder — Xcode's integrated storyboard design tool.
 <a name="asides"></a>
 
 In **headers**, capitalize *every* word except: "a," "an," "and," "at," "but," "by," "for," "in,"
@@ -335,7 +379,18 @@ Trustworthy, Useful, Transparent **over** Uninformed, Unhelpful, Overtly Salesy
 
 ### Personhood
 
-Curriculum should be writen in first-person plural (We).
+In order to write engaging curriculum the use of active voice: "you" (_active voice_) should be preferred over "we".
+
+**Incorrect:**<br/>
+
+"In the next section, we'll talk about decision trees"
+
+
+**Correct:**<br/>
+"In the next section, you'll learn about decision trees" <br/>
+OR <br/>
+"In the next section, you'll be introduced to decision trees"
+
 
 <a name="non-gendered_speech"></a>
 
