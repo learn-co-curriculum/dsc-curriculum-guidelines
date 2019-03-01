@@ -21,6 +21,7 @@ Contents:
 * Style
   * [Python Style Guide](#python_style)
   * [Python Libraries](#python_libraries)
+  * [Introducing New Functions or Methods](#new_functions)
   * [Abbreviations](#abbreviations)
   * [Capitalization](#capitalization)
   * [Asides](#asides)
@@ -74,6 +75,22 @@ Avoid beginning a new sentence with a code word whenever possible
 Not: `pwd` means "print working directory".  
 Use: The `pwd` command means "print working directory".  
 
+Do not use capitals in your variable names, and use underscores as a word separator.
+
+Incorrect: 
+
+```python
+MeanX = mean(x)
+LoanData = pd.read_csv("loandata.csv")
+```
+ 
+ Instead, do:
+
+```python
+mean_x = mean(x)
+loan_data = pd.read_csv("loandata.csv")
+```
+
 <a name="code_blocks"></a>
 
 ### Code Blocks
@@ -106,25 +123,6 @@ import numpy as np
 # Open a csv-file using pandas, and pass the path to the correct file 
 train = pd.read_csv("C:/desktop/data/titanic.csv")
 ```
-
-~~~python
-# Import the necessary libraries
-import pandas as pd
-import numpy as np
-
-# Open a csv-file using pandas, and pass the path to the correct file 
-train = pd.read_csv("C:/desktop/data/titanic.csv")
-~~~
-
-~~~
-# Import the necessary libraries
-import pandas as pd
-import numpy as np
-
-# Open a csv-file using pandas, and pass the path to the correct file 
-train = pd.read_csv("C:/desktop/data/titanic.csv")
-~~~
-
 
 <a name="lists_and_bullets"></a>
 
@@ -220,6 +218,25 @@ The libraries stated above are used **very** often. You'll see that `pandas` wil
 pd.read_csv("C://anyfolder/anyfile.csv")
 ```
 when you simply use `import pandas` or name it differently. We encourage writers to be very consistent in naming libraries when importing them, and to make sure to do a quick check on what the naming conventions are when importing new (and less common) libraries. 
+
+<a name="new_functions"></a>
+
+### Introducing New Functions or Methods
+Whenever introducing new code, formally introducing these functions with their most commonly used arguments is encouraged. For example:
+
+To open a .csv-file you can use the pandas-function:
+
+```python
+read_csv(filepath, sep=', ', header='infer', index_col=None)
+```
+Where
+
+`filepath` -- denotes the path to the file (could be "C://anyfolder/anyfile.csv", "anyfile.csv", ...) <br/>
+`sep` -- The separator used in your csv-file <br/>
+`header` -- Row number to use as the column name. Default value 'infer' infers column names from the rist line of the file, which is identical to `header=0` <br/>
+`index_col` -- Column to use as the row labels of the DataFrame
+
+ for a full list of arguments, see [`read_csv()` documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html).
 
 
 <a name="abbreviations"></a>
@@ -364,7 +381,7 @@ Trustworthy, Useful, Transparent **over** Uninformed, Unhelpful, Overtly Salesy
 
 In order to write engaging curriculum the use of active voice: "you" (_active voice_) should be preferred over "we".
 
-Incorrect:
+**Incorrect:**<br/>
 
 "In the next section, we'll talk about decision trees"
 
