@@ -50,7 +50,7 @@ Next, make sure to review the lesson and fix for the following main issues:
 7. Clean up the repository:
 	- Make sure no reduntant files are in there: remove unused images, remove `DS_store` etc.
 	- Move used images to `images` file and make sure the notebooks refer to it correctly
-	- **NOTE**: Images created using python (using matplotlib/seaborn) and generated so they are in the readme should float freely in the repository and don't have to be moved to the `images` folder.
+	- **NOTE**: Images created using python (using matplotlib/seaborn) and generated so they are in the `readme.md` will automatically be placed in an `index_files` folder **and should stay there**!
 
 ### Step 3.4: Editing the SWBATs
 
