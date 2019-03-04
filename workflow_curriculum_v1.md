@@ -47,6 +47,10 @@ Next, make sure to review the lesson and fix for the following main issues:
 	- Is everything we want to explain well explained? If answer is “no”: add text/explanation
 6. Mathematical notation:
 	- Make sure _all_ the math is using LaTeX (no weird greek symbols outside LaTeX, no images)
+7. Clean up the repository:
+	- Make sure no reduntant files are in there: remove unused images, remove `DS_store` etc.
+	- Move used images to `images` file and make sure the notebooks refer to it correctly
+	- **NOTE**: Images created using python (using matplotlib/seaborn) and generated so they are in the readme should float freely in the repository and don't have to be moved to the `images` folder.
 
 ### Step 3.4: Editing the SWBATs
 
