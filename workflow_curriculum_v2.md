@@ -10,7 +10,7 @@ Once assigned a section or brick to work on, look at the [curriculum spreadsheet
 
 ## Step 2: Creating New Pepositories
 
-Depending on whether a lesson existed for Curriculum V0, you will 
+Depending on whether a lesson existed for Curriculum V1, you will 
 
 1. Copy the existing repository into a new one following [these steps](https://github.com/learn-co-curriculum/dsc-curriculum-guidelines/blob/master/cloning_repositories.md).
 2. Create a new repository according to the right format (repository structure guidelines can be found [here](https://github.com/learn-co-curriculum/dsc-curriculum-guidelines/blob/master/lesson_repository_structure.md))
