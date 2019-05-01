@@ -1,4 +1,4 @@
-# Workflow for Curriculum V1
+# Workflow for Curriculum V2
 
 
 ## Step 1: Looking at the Curriculum Spreadsheet
