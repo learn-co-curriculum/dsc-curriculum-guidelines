@@ -22,3 +22,5 @@ From the target repository run `python <path-to-index.py file>`.
 * Create alias and add instructions like Markdown Merger
 * get commit message from curriculum-team branch and add as commit to master & sol
 * more thought into how it would handle cell types other than markdown or code (master is probs fine, what about solution??)
+* are the remote/local branches tracking / do we need to -u to set upstream ????
+* what if master is protected? do we need to -f force push? seemed to work
