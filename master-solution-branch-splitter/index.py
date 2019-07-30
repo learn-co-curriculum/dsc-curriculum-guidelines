@@ -5,7 +5,7 @@ from git import Repo, Git, GitCommandError
 
 # CONSTANTS
 SOLUTION_TAG = "__SOLUTION__"
-CURRICULUM_BRANCH = "curriculum-team"
+CURRICULUM_BRANCH = "curriculum"
 MASTER_BRANCH = "master"
 SOLUTION_BRANCH = "solution"
 
