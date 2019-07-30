@@ -18,11 +18,12 @@
 
 From the target repository run `python <path-to-index.py file>`.
 
+To create an alias so you do not need to type the full path to the file every time,
+add the following to you `.bash_profile`. (Replace the example path with the path to your local file)
+
+```bash
+alias dscreate ='python /Users/alex/Development/DS/dsc-curriculum-guidelines/master-solution-branch-splitter/index.py'
+```
+
 ### TODO
-* Create alias and add instructions like Markdown Merger
-* ~get commit message from curriculum branch and add as commit to master & sol~
-* ~more thought into how it would handle cell types other than markdown or code (master is probs fine, what about solution??)~
-* are the remote/local branches tracking / do we need to -u to set upstream ????
-* what if master is protected? do we need to -f force push? seemed to work
-* writing multi-line file (maybe)
-* ~should push to remote curriculum branch~
+* Deprecate the markdown merger when/if we move forward
