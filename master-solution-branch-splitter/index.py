@@ -124,8 +124,13 @@ except GitCommandError:
 
 commit_message = repo.head.commit.message
 notebook_to_markdown()
+
 repo.git.add(".")
-repo.git.commit("-m", commit_message)
+try:
+    repo.git.commit("-m", commit_message)
+except GitCommandError:
+    print("Nothing to commit")
+
 # should raise if there are local unstaged changes
 print(f"pushing to remote {CURRICULUM_BRANCH} branch")
 git.push("origin", CURRICULUM_BRANCH)
