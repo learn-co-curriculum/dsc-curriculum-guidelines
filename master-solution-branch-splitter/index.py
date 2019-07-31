@@ -152,3 +152,6 @@ sol_notebook    = create_sol_notebook(dict(notebook_json))
 
 sync_branch(repo, MASTER_BRANCH, master_notebook, msg=commit_message)
 sync_branch(repo, SOLUTION_BRANCH, sol_notebook, msg=commit_message)
+
+# leave user on curriculum branch
+git.checkout(CURRICULUM_BRANCH)
