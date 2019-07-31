@@ -79,11 +79,11 @@ def notebook_to_markdown():
 
 
 def sync_branch(repo, branch, notebook, msg="Curriculum Auto-Sync"):
-    # switch to branch if exists or create new branch
+    # switch to branch, raise if it does not exist
     try:
         repo.git.checkout(branch)
     except GitCommandError:
-        repo.git.checkout("HEAD", b=branch)
+        raise Exception(f"A branch called '{branch}' must exist")
 
     # write index.ipynb
     f = open("index.ipynb", "w")
