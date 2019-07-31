@@ -25,7 +25,7 @@ To create an alias so you do not need to type the full path to the file every ti
 add the following to you `.bash_profile`. (Replace the example path with the path to your local file)
 
 ```bash
-alias dscreate ='python /Users/alex/Development/DS/dsc-curriculum-guidelines/master-solution-branch-splitter/index.py'
+alias dscreate="python /Users/alex/Development/DS/dsc-curriculum-guidelines/master-solution-branch-splitter/index.py"
 ```
 
 #### Commit Messages
