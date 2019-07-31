@@ -2,12 +2,14 @@ import json
 import os
 import subprocess
 from git import Repo, Git, GitCommandError
+import sys
 
 # CONSTANTS
 SOLUTION_TAG = "__SOLUTION__"
 CURRICULUM_BRANCH = "curriculum"
 MASTER_BRANCH = "master"
 SOLUTION_BRANCH = "solution"
+CUSTOM_COMMIT_MSG_FLAG = "-m"
 
 # FUNCTIONS
 
@@ -117,12 +119,21 @@ repo = Repo(os.getcwd())
 git = repo.git
 
 
+# get commit message from bash or from repo
+try:
+    sys_args = sys.argv
+    i = list(sys_args).index(CUSTOM_COMMIT_MSG_FLAG)
+    custom_msg = sys_args[i + 1]
+except:
+    custom_msg = None
+
+commit_message = custom_msg if custom_msg else repo.head.commit.message
+
 try:
     git.checkout(CURRICULUM_BRANCH)
 except GitCommandError:
     raise Exception(f"A branch called {CURRICULUM_BRANCH} must exist")
 
-commit_message = repo.head.commit.message
 notebook_to_markdown()
 
 repo.git.add(".")

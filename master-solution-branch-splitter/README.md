@@ -28,6 +28,14 @@ add the following to you `.bash_profile`. (Replace the example path with the pat
 alias dscreate ='python /Users/alex/Development/DS/dsc-curriculum-guidelines/master-solution-branch-splitter/index.py'
 ```
 
+#### Commit Messages
+By default the script will take the last commit message from `curriculum` and apply it to both `master` & `solution`. If you would like to supply a custom commit message to appear on the new commits on `master` & `solution` use the `-m` flag followed by your message. Wrap your full message in quotes.
+
+Example:
+```bash
+dscreate -m "My custom commit message"
+```
+
 ## Troubleshooting
 The first time you run this you may need to run
 ```
