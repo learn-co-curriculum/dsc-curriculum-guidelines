@@ -31,6 +31,7 @@ alias dscreate="python /Users/alex/Development/DS/dsc-curriculum-guidelines/mast
 #### Commit Messages
 By default the script will take the last commit message from `curriculum` and apply it to both `master` & `solution`. If you would like to supply a custom commit message to appear on the new commits on `master` & `solution` use the `-m` flag followed by your message. Wrap your full message in quotes.
 
+Example commit message:
 ```bash
 $ dscreate -m "My custom commit message"
 ```
@@ -72,11 +73,6 @@ The "tagged" cells will appear in order on `solution`. The untagged cells will a
   ]
 }
 
-```
-
-Example:
-```bash
-dscreate -m "My custom commit message"
 ```
 
 ## Troubleshooting
