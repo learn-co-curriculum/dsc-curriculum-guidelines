@@ -81,30 +81,32 @@ def notebook_to_markdown():
 
 
 def sync_branch(repo, branch, notebook, msg="Curriculum Auto-Sync"):
-    # switch to branch, raise if it does not exist
+    # switch to branch, do nothing if does not exist
     try:
         repo.git.checkout(branch)
+        branch_exists = True
     except GitCommandError:
-        raise Exception(f"A branch called '{branch}' must exist")
+        branch_exists = False
 
-    # write index.ipynb
-    f = open("index.ipynb", "w")
-    f.write(json.dumps(notebook))
-    f.close()
+    if branch_exists:
+        # write index.ipynb
+        f = open("index.ipynb", "w")
+        f.write(json.dumps(notebook))
+        f.close()
 
-    # generate markdown
-    notebook_to_markdown()
+        # generate markdown
+        notebook_to_markdown()
 
-    # add, commit, push
-    repo.git.add(".")
-    try:
-        repo.git.commit("-m", msg)
-        print(f"Added Commit: {repo.commit()}")
-    except GitCommandError:
-        print("Nothing to commit")
+        # add, commit, push
+        repo.git.add(".")
+        try:
+            repo.git.commit("-m", msg)
+            print(f"Added Commit: {repo.commit()}")
+        except GitCommandError:
+            print("Nothing to commit")
 
-    print(f"pushing to remote {branch} branch")
-    repo.git.push("origin", branch)
+        print(f"pushing to remote {branch} branch")
+        repo.git.push("origin", branch)
 
 
 # RUN
