@@ -87,5 +87,8 @@ pip install gitpython
 
 When setting up the alias you may also need to update your `.bash_profile` by closing and reopening terminal or running `source ~/.bash_profile`
 
+## Style Guide
+* [Curriculm Branch Style Guide](https://docs.google.com/document/d/1YpJN9S1kzoObMyIE02OszgHdlqhRP6ktgW5S74UzbNk/edit)
+
 ### TODO
 * Deprecate the markdown merger when/if we move forward
