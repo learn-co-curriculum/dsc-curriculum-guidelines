@@ -3,7 +3,8 @@
 ![Garden of Forking Paths](Garden-of-Forking-Paths.jpg)
 
 ## Prerequisites
-* A repository with a branch called `curriculum` containing a jupyter-notebook `index.ipynb` file
+* Clone this repository to your local machine
+* The lesson repository being updated must have a branch called `curriculum` containing a jupyter-notebook `index.ipynb` file
 * Code cells containing solution-only code should be "tagged" as such. To do this add the following comment anywhere in the the cell:
 ```
 # __SOLUTION__
@@ -91,4 +92,4 @@ When setting up the alias you may also need to update your `.bash_profile` by cl
 * [Curriculm Branch Style Guide](https://docs.google.com/document/d/1YpJN9S1kzoObMyIE02OszgHdlqhRP6ktgW5S74UzbNk/edit)
 
 ### TODO
-* Deprecate the markdown merger when/if we move forward
+* Deprecate the markdown merger when appropriate
