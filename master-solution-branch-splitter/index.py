@@ -154,9 +154,9 @@ except GitCommandError:
 print(f"pushing to remote {CURRICULUM_BRANCH} branch")
 git.push("origin", CURRICULUM_BRANCH)
 
-notebook_json   = dict(get_notebook_json())
-master_notebook = create_master_notebook(notebook_json)
-sol_notebook    = create_sol_notebook(notebook_json)
+notebook_json   = get_notebook_json()
+master_notebook = create_master_notebook(dict(notebook_json))
+sol_notebook    = create_sol_notebook(dict(notebook_json))
 
 sync_branch(repo, MASTER_BRANCH, master_notebook, msg=commit_message)
 sync_branch(repo, SOLUTION_BRANCH, sol_notebook, msg=commit_message)
