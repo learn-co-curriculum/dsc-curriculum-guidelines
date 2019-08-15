@@ -89,6 +89,12 @@ def sync_branch(repo, branch, notebook, msg="Curriculum Auto-Sync"):
         branch_exists = False
 
     if branch_exists:
+        # get all files from curriculum branch and put onto this branch,
+        # (the notebook and readme will be overwritten in the subsequent steps)
+        # Interesting use of the `checkout` command
+        # https://superuser.com/questions/692794/how-can-i-get-all-the-files-from-one-git-branch-and-put-them-into-the-current-b/1431858#1431858
+        repo.git.checkout(CURRICULUM_BRANCH, ".")
+
         # write index.ipynb
         f = open("index.ipynb", "w")
         f.write(json.dumps(notebook))
@@ -148,9 +154,9 @@ except GitCommandError:
 print(f"pushing to remote {CURRICULUM_BRANCH} branch")
 git.push("origin", CURRICULUM_BRANCH)
 
-notebook_json   = get_notebook_json()
-master_notebook = create_master_notebook(dict(notebook_json))
-sol_notebook    = create_sol_notebook(dict(notebook_json))
+notebook_json   = dict(get_notebook_json())
+master_notebook = create_master_notebook(notebook_json)
+sol_notebook    = create_sol_notebook(notebook_json)
 
 sync_branch(repo, MASTER_BRANCH, master_notebook, msg=commit_message)
 sync_branch(repo, SOLUTION_BRANCH, sol_notebook, msg=commit_message)
