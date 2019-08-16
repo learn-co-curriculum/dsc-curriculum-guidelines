@@ -94,10 +94,10 @@ When setting up the alias you may also need to update your `.bash_profile` by cl
 ## Style Guide
 * [Curriculm Branch Style Guide](https://docs.google.com/document/d/1YpJN9S1kzoObMyIE02OszgHdlqhRP6ktgW5S74UzbNk/edit)
 
-## Note on Additional Files
-This tool is primarily designed to deal with the notebook `index.ipynb` file and the markdown `README.md` file. Additional directories or files on the repo are NOT copied from `curriculum` to `master` or `solution`.
+## Note on Additional Files (not notebook or readme)
+Any additional files added to `curriculum` and committed will be transferred to both `master` & `solution` branches when the script is run.  If one specific branch, but not the other, needs (or doesn't need) a file, it will have to be added (or removed) to that specific branch manually. 
 
-The current behavior is that all "additional" files from `master` are copied to `solution`. To add files that should only be on the `solution` branch, push to `solution` directly. 
+_Note: The `index_files` directory of images is deleted and then recreated when the notebook is converted to markdown on both `master` & `solution` branches each time the script runs._
 
 ### TODO
 * Deprecate the markdown merger when appropriate
