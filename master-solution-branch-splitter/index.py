@@ -74,6 +74,10 @@ def create_sol_notebook(nb):
     nb.update({"cells": cells})
     return nb
 
+def write_new_notebook(notebook):
+    f = open("index.ipynb", "w")
+    f.write(json.dumps(notebook))
+    f.close()
 
 def notebook_to_markdown():
     subprocess.call(["jupyter", "nbconvert", "index.ipynb",  "--to", "markdown"])
@@ -95,10 +99,11 @@ def sync_branch(repo, branch, notebook, msg="Curriculum Auto-Sync"):
         # https://superuser.com/questions/692794/how-can-i-get-all-the-files-from-one-git-branch-and-put-them-into-the-current-b/1431858#1431858
         repo.git.checkout(CURRICULUM_BRANCH, ".")
 
+        # delete current images, they'll be regenerated along with the notebook
+        subprocess.call(["rm", "-rf", "index_files"])
+
         # write index.ipynb
-        f = open("index.ipynb", "w")
-        f.write(json.dumps(notebook))
-        f.close()
+        write_new_notebook(notebook)
 
         # generate markdown
         notebook_to_markdown()
