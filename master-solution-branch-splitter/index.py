@@ -109,63 +109,53 @@ def sync_branch(repo, branch, notebook, msg="Curriculum Auto-Sync"):
         notebook_to_markdown()
 
         # add, commit, push
-        repo.git.add(".")
-        try:
-            repo.git.commit("-m", msg)
-            print(f"Added Commit: {repo.commit()}")
-        except GitCommandError:
-            print("Nothing to commit")
+        add_commit_push(repo, msg, branch)
 
-        print(f"pushing to remote {branch} branch")
-        repo.git.push("origin", branch)
+def get_commit_message(repo):
+    # get commit message from repo or custom flag
+    sys_args = list(sys.argv)
+    i = sys_args.index(CUSTOM_COMMIT_MSG_FLAG) if CUSTOM_COMMIT_MSG_FLAG in sys_args else None
 
+    return sys_args[i + 1] if i else repo.head.commit.message
+
+
+def add_commit_push(repo, commit_msg, branch):
+    repo.git.add(".")
+    try:
+        repo.git.commit("-m", commit_msg)
+    except GitCommandError:
+        print("Nothing to commit")
+
+    print(f"pushing to remote {branch} branch")
+    repo.git.push("origin", branch)
 
 # RUN
 # ======================
 
+# Identity
 git_ssh_identity_file = os.path.expanduser('~/.ssh/id_rsa')
 git_ssh_cmd = 'ssh -i %s' % git_ssh_identity_file
-
 Git().custom_environment(GIT_SSH_COMMAND=git_ssh_cmd)
 
 repo = Repo(os.getcwd())
-git = repo.git
-
-
-# get commit message from bash or from repo
-try:
-    sys_args = sys.argv
-    i = list(sys_args).index(CUSTOM_COMMIT_MSG_FLAG)
-    custom_msg = sys_args[i + 1]
-except:
-    custom_msg = None
-
-commit_message = custom_msg if custom_msg else repo.head.commit.message
 
 try:
-    git.checkout(CURRICULUM_BRANCH)
+    repo.git.checkout(CURRICULUM_BRANCH)
 except GitCommandError:
     raise Exception(f"A branch called {CURRICULUM_BRANCH} must exist")
 
+commit_message = get_commit_message(repo)
+
 notebook_to_markdown()
 
-repo.git.add(".")
-try:
-    repo.git.commit("-m", commit_message)
-except GitCommandError:
-    print("Nothing to commit")
-
-# should raise if there are local unstaged changes
-print(f"pushing to remote {CURRICULUM_BRANCH} branch")
-git.push("origin", CURRICULUM_BRANCH)
+add_commit_push(repo, commit_message, CURRICULUM_BRANCH)
 
 notebook_json   = get_notebook_json()
 master_notebook = create_master_notebook(dict(notebook_json)) # pass a copy
 sol_notebook    = create_sol_notebook(dict(notebook_json)) # pass a copy
 
-
 sync_branch(repo, MASTER_BRANCH, master_notebook, msg=commit_message)
 sync_branch(repo, SOLUTION_BRANCH, sol_notebook, msg=commit_message)
 
 # leave user on curriculum branch
-git.checkout(CURRICULUM_BRANCH)
+repo.git.checkout(CURRICULUM_BRANCH)
