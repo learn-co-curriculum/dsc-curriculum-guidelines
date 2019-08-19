@@ -109,7 +109,9 @@ def sync_branch(repo, branch, notebook, msg="Curriculum Auto-Sync"):
         notebook_to_markdown()
 
         # add, commit, push
-        add_commit_push(repo, msg, branch)
+        add_and_commit(repo, msg)
+        print(f"pushing to remote {branch} branch")
+        repo.git.push("origin", branch)
 
 def get_commit_message(repo):
     # get commit message from repo or custom flag
@@ -119,15 +121,12 @@ def get_commit_message(repo):
     return sys_args[i + 1] if i else repo.head.commit.message
 
 
-def add_commit_push(repo, commit_msg, branch):
+def add_and_commit(repo, commit_msg):
     repo.git.add(".")
     try:
         repo.git.commit("-m", commit_msg)
     except GitCommandError:
         print("Nothing to commit")
-
-    print(f"pushing to remote {branch} branch")
-    repo.git.push("origin", branch)
 
 # RUN
 # ======================
@@ -148,7 +147,9 @@ commit_message = get_commit_message(repo)
 
 notebook_to_markdown()
 
-add_commit_push(repo, commit_message, CURRICULUM_BRANCH)
+add_and_commit(repo, commit_message)
+print(f"pushing to remote {CURRICULUM_BRANCH} branch")
+repo.git.push("origin", CURRICULUM_BRANCH)
 
 notebook_json   = get_notebook_json()
 master_notebook = create_master_notebook(dict(notebook_json)) # pass a copy
