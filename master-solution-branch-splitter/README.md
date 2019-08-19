@@ -4,7 +4,7 @@
 
 A one-step procedure to update DS Curriculum using a branch named `curriculum` as the sole "working" branch. 
 
-Edit the notebook file on the `curriculum` branch, commit, run this script. That's it; `master` and `solution` will be in sync. Code cells within a jupyter notebook on the `curriculum` branch can be "tagged" as `solution`-branch-only cells.
+Edit the notebook file on the `curriculum` branch, commit, run this script. That's it. `master` and `solution` will be in sync. Code cells within a jupyter notebook on the `curriculum` branch can be "tagged" as `solution`-branch-only cells.
 
 ## What the script does
 * Commits and pushes to remote `curriculum` branch after generating a `README.md` markdown file from the notebook.
