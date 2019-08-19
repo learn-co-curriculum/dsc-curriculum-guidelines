@@ -2,17 +2,11 @@
 
 ![Garden of Forking Paths](Garden-of-Forking-Paths.jpg)
 
-A one-step procedure to update DS Curriculum. Edit the notebook on the `curriculum` branch, commit, run this script. That's it.
+A one-step procedure to update DS Curriculum using a branch named `curriculum` as the sole "working" branch. 
 
-## Prerequisites
-* Clone this repository to your local machine
-* The lesson repository being updated must have a branch called `curriculum` containing a jupyter-notebook `index.ipynb` file (All lessons on the v2 track should have one).
-* Code cells containing solution-only code should be "tagged" as such. To do this add the following comment anywhere in the the cell:
-```
-# __SOLUTION__
-```
+Edit the notebook file on the `curriculum` branch, commit, run this script. That's it; `master` and `solution` will be in sync. Code cells within a jupyter notebook on the `curriculum` branch can be "tagged" as `solution`-branch-only cells.
 
-## What it does
+## What the script does
 * Commits and pushes to remote `curriculum` branch after generating a `README.md` markdown file from the notebook.
 
 * Commits and pushes to remote `master` branch. Commit will include a `index.ipynb` notebook file & a `README.md` markdown file generated from the notebook. The `master` branch will have all markdown cells + all _untagged_ code cells found on the `curriculum` branch.
@@ -21,6 +15,14 @@ A one-step procedure to update DS Curriculum. Edit the notebook on the `curricul
 
 ## Example Usage Video
 * [Here is a short (4 minute) video demonstrating the use of the tool](https://www.youtube.com/watch?v=p95VAaC0Gbg&feature=youtu.be)
+
+## Prerequisites
+* Clone this repository to your local machine
+* The lesson repository being updated must have a branch called `curriculum` containing a jupyter-notebook `index.ipynb` file (All lessons on the v2 track should have one).
+* Code cells containing solution-only code should be "tagged" as such. To do this add the following comment anywhere in the the cell:
+```
+# __SOLUTION__
+```
 
 ## Instructions
 * `cd` into the repo of the lab you want to edit
@@ -44,45 +46,6 @@ By default the script will take the last commit message from `curriculum` and ap
 Example commit message:
 ```bash
 $ dscreate -m "My custom commit message"
-```
-
-#### Cell Order
-The exact order of how you interleave solution code cells and master code cells will not matter.
-
-Both of the following jupyter notebook structures would result in the same output on `master` and on `solution`.
-The "tagged" cells will appear in order on `solution`. The untagged cells will appear in order on `master`
-
-```
-# Notebook 1
-{
-  "cells": [
-    "Markdown Cell 1",
-    "Code Cell 1",
-    "__SOLUTION__ Code Cell 1",
-    "Code Cell 2",
-    "__SOLUTION__ Code Cell 2",
-    "Code Cell 3".
-    "__SOLUTION__ Code Cell 3",
-    "__SOLUTION__ Code Cell 4",
-    "Markdown Cell 2"
-  ]
-}
-
-# Notebook 2
-{
-  "cells": [
-    "Markdown Cell 1",
-    "Code Cell 1",
-    "Code Cell 2",
-    "Code Cell 3",
-    "__SOLUTION__ Code Cell 1",
-    "__SOLUTION__ Code Cell 2",
-    "__SOLUTION__ Code Cell 3",
-    "__SOLUTION__ Code Cell 4",
-    "Markdown Cell 2"
-  ]
-}
-
 ```
 
 ## Troubleshooting
