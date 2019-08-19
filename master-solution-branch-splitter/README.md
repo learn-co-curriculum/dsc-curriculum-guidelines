@@ -2,9 +2,11 @@
 
 ![Garden of Forking Paths](Garden-of-Forking-Paths.jpg)
 
+A one-step procedure to update DS Curriculum. Edit the notebook on the `curriculum` branch, commit, run this script. That's it.
+
 ## Prerequisites
 * Clone this repository to your local machine
-* The lesson repository being updated must have a branch called `curriculum` containing a jupyter-notebook `index.ipynb` file
+* The lesson repository being updated must have a branch called `curriculum` containing a jupyter-notebook `index.ipynb` file (All lessons on the v2 track should have one).
 * Code cells containing solution-only code should be "tagged" as such. To do this add the following comment anywhere in the the cell:
 ```
 # __SOLUTION__
