@@ -93,6 +93,9 @@ def sync_branch(repo, branch, notebook, msg="Curriculum Auto-Sync"):
         branch_exists = False
 
     if branch_exists:
+        # pull any changes from remote local does not have to avoid pushing errors
+        repo.git.pull("origin", branch)
+
         # get all files from curriculum branch and put onto this branch,
         # (the notebook and readme will be overwritten in the subsequent steps)
         # Interesting use of the `checkout` command
