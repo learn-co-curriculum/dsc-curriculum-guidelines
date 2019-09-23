@@ -22,7 +22,7 @@ Some things of note:
 ## Generate a log of all errors curriculum-wide
 Running the `error_log.py` file in this directory will go through every single lesson and execute the `index.ipynb` jupyter notebook file. There are a few instructions in the file you will need to follow (things like updating the path to the lessons directory). These are clearly marked with `# ACTION REQUIRED` comments at the top of the file.
 
-This will take a long time (2+ hours) to run for the entire curriculum. It runs the notebook in each lesson and then creates a log file of whatever was sent to STDOUT and STDERR for each lesson. It then cleans up the files that represent a lesson that was executed successfully and prints the remaining errors.
+This will take a long time (2+ hours) to run for the entire curriculum. It runs the notebook in each lesson and then creates a log file of whatever was sent to STDOUT and STDERR for each lesson. It then cleans up the files that represent a lesson that was executed successfully and prints the names of the remaining erroring lessons.
 
 ## Check against known-to-error lessons
 The list you created should be checked against a list of lessons that are known to error. Lessons could legitimately be designed to error for several reasons:
