@@ -25,7 +25,8 @@ def is_markdown_cell(cell):
 
 
 def contains_tag(line):
-    return SOLUTION_TAG in line.strip().split(" ")
+    # returns true for '# __SOLUTION__' or '#__SOLUTION__'
+    return any(tag in line.strip().split(" ") for tag in [SOLUTION_TAG, f"#{SOLUTION_TAG}"])
 
 
 def is_solution_cell(cell):
