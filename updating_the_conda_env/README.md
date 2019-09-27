@@ -16,6 +16,7 @@ Run the `package_check.py` file in this directory and confirm that there are no 
   * Note: I had to make a few small modifications to this yml file to get everything to work
   * For some reason the `graphviz` package gets listed as `python-graphviz` which pip cannot find. Change the name to `graphviz`
   * May be a one-off thing, but I had to remove the specified version in the yml file from the `pyyaml` package otherwise I encountered errors
+* Create the new environment from the yml file with `conda env create -f new_environment_test.yml`
 * It will prompt you to activate the new environment with `conda activate new-env-test`
 
 Be sure you are using the new env when you run the script to generate an error log. Note that you can [set a default conda environment by adding the activate command to your .bashrc file](https://stackoverflow.com/questions/35575286/change-default-environment-in-anaconda)
