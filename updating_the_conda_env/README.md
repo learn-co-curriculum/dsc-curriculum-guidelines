@@ -10,9 +10,18 @@ In doing this we want to be sure that we are not breaking anything that wasn't a
 Run the `package_check.py` file in this directory and confirm that there are no errors, `pip install` the appropriate packages until everything is installed. _Note:_ This list is not yet comprehensive, if things are missing, add to it!
 
 ## Update your local conda environment
+* Update all packages `conda update --all`
+* Export your env to a yaml file `conda env create -f new_environment_test.yml`
+* Open up the yml file and update the name of the env to whatever you'd like for this dry run (`new-env-test`)
+  * Note: I had to make a few small modifications to this yml file to get everything to work
+  * For some reason the `graphviz` package gets listed as `python-graphviz` which pip cannot find. Change the name to `graphviz`
+  * May be a one-off thing, but I had to remove the specified version in the yml file from the `pyyaml` package otherwise I encountered errors
+* It will prompt you to activate the new environment with `conda activate new-env-test`
+
+Be sure you are using the new env when you run the script to generate an error log. Note that you can [set a default conda environment by adding the activate command to your .bashrc file](https://stackoverflow.com/questions/35575286/change-default-environment-in-anaconda)
 
 ## Create a local directory containing copies of all lessons
-You can clone down all the lessons from a track by cloning down the [SE Curriculum Team repo] ans following [the instructions here](https://github.com/learn-co-curriculum/curriculum-team/tree/master/scripts)
+You can clone down all the lessons from a track by cloning down the [SE Curriculum Team repo] and following [the instructions here](https://github.com/learn-co-curriculum/curriculum-team/tree/master/scripts)
 
 Some things of note:
 * The track's id can be found by visiting `learn.co/curriculum` finding the track, clicking it, and copying the id from the URL.
