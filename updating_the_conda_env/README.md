@@ -11,7 +11,7 @@ Run the `package_check.py` file in this directory and confirm that there are no 
 
 ## Update your local conda environment
 * Update all packages `conda update --all`
-* Export your env to a yaml file `conda env create -f new_environment_test.yml`
+* Export your env to a yaml file `conda env export > new-env-test.yml`
 * Open up the yml file and update the name of the env to whatever you'd like for this dry run (`new-env-test`)
   * Note: I had to make a few small modifications to this yml file to get everything to work
   * For some reason the `graphviz` package gets listed as `python-graphviz` which pip cannot find. Change the name to `graphviz`
