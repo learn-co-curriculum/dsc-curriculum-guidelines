@@ -1,13 +1,11 @@
 # Updating the Conda Environment
 
-Periodically we will update the conda environment used across the whole curriculum.
-
-In doing this we want to be sure that we are not breaking anything that wasn't already broken.
+Periodically the [conda environment used across the whole curriculum](https://github.com/learn-co-curriculum/dsc-data-science-env) will need to be updated. Before applying the updates it should be confirmed that the updates don't cause break lessons.
 
 ## Steps
 
 ## Confirm that you have all the packages you need to.
-In the [learn environment we ask students to use](https://github.com/learn-co-curriculum/dsc-data-science-env), a handful of packages are specifically left out. This is mostly becuase these can often cause problems when installing and we'd rather not frontload all these issues in the student experience. Also, they are only used in a few labs.
+In the [learn environment we ask students to use](https://github.com/learn-co-curriculum/dsc-data-science-env), a handful of packages are specifically left out. This is mostly becuase these can often cause problems when installing and we'd rather not frontload all these issues in the student experience. Also, they are only used in a few labs. [See more info on the specific packages here](https://docs.google.com/document/d/1io_-mqILBstaDNEwyovwrS9TIHvLMP6bEpk_oOb88hc/edit?usp=sharing)
 
 To make sure you have these correctly installed run the `package_check.py` file in this directory and confirm that there are no errors, `pip install` the appropriate packages until everything is installed. _Note:_ This list may not be comprehensive, if things are missing, add to it!
 
@@ -18,6 +16,7 @@ To make sure you have these correctly installed run the `package_check.py` file 
   * Note: I had to make a few small modifications to this yml file to get everything to work
   * For some reason the `graphviz` package gets listed as `python-graphviz` which pip cannot find. Change the name to `graphviz`
   * May be a one-off thing, but I had to remove the specified version in the yml file from the `pyyaml` package otherwise I encountered errors
+* Remove the problematic packages listed above entirely
 * Create the new environment from the yml file with `conda env create -f new_environment_test.yml`
 * It will prompt you to activate the new environment with `conda activate new-env-test`
 
@@ -46,3 +45,6 @@ The list you created should be checked against a list of lessons that are known 
 You may still want to spot-check a few of the known-to-error lessons. For example, you could confirm that for a lesson that is known to timeout, the error you received was actually a `TimeoutError: Cell execution timed out`
 
 See the [list of known-erroring labs here](known-to-error.md)
+
+## Update the Environments
+The last steps are to update the [student repo](https://github.com/learn-co-curriculum/dsc-data-science-env) with the new yml files. This should be done in conjunction with updating any labs or lessons that need to be updated. Reach out to Engineering to update the environment for the in browser jupyter notebooks.
