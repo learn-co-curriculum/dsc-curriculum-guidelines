@@ -7,7 +7,9 @@ In doing this we want to be sure that we are not breaking anything that wasn't a
 ## Steps
 
 ## Confirm that you have all the packages you need to.
-Run the `package_check.py` file in this directory and confirm that there are no errors, `pip install` the appropriate packages until everything is installed. _Note:_ This list is not yet comprehensive, if things are missing, add to it!
+In the [learn environment we ask students to use](https://github.com/learn-co-curriculum/dsc-data-science-env), a handful of packages are specifically left out. This is mostly becuase these can often cause problems when installing and we'd rather not frontload all these issues in the student experience. Also, they are only used in a few labs.
+
+To make sure you have these correctly installed run the `package_check.py` file in this directory and confirm that there are no errors, `pip install` the appropriate packages until everything is installed. _Note:_ This list may not be comprehensive, if things are missing, add to it!
 
 ## Update your local conda environment
 * Update all packages `conda update --all`
