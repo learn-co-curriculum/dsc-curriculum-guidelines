@@ -17,7 +17,8 @@ To make sure you have these correctly installed run the `package_check.py` file 
   * Note, some massageng required: I had to make a few small modifications to this yml file to get everything to work
   * For some reason the `graphviz` package gets listed as `python-graphviz` which pip cannot find. Change the name to `graphviz`
   * May be a one-off thing, but I had to remove the specified version in the yml file from the `pyyaml` package otherwise I encountered errors. Fine to use this strategy if you get small version conflicts on different machines.
-* [Remove the problematic packages listed above from the yml file entirely](https://docs.google.com/document/d/1io_-mqILBstaDNEwyovwrS9TIHvLMP6bEpk_oOb88hc/edit?usp=sharing)
+* Remove the [problematic packages](https://docs.google.com/document/d/1io_-mqILBstaDNEwyovwrS9TIHvLMP6bEpk_oOb88hc/edit?usp=sharing) listed above from the yml file entirely
+* Remove any personal packages that you may have installed that are not required for basic setup
 * Create the new environment from the yml file with `conda env create -f new_environment_test.yml`
 * It will prompt you to activate the new environment with `conda activate new-env-test`
 
