@@ -11,11 +11,12 @@ To make sure you have these correctly installed run the `package_check.py` file 
 
 ## Update your local conda environment
 * Update all packages `conda update --all`
-* Export your env to a yaml file `conda env export > new-env-test.yml`
+* Export your env to a yaml file `conda env export > new-env-test.yml --no-builds`
+  * `--no-builds` specifies not to include build specifications, these specs may conflict when the Engineering team tries to tun this script in their environment
 * Open up the yml file and update the name of the env to whatever you'd like for this dry run (`new-env-test`)
-  * Note: I had to make a few small modifications to this yml file to get everything to work
+  * Note, some massageng required: I had to make a few small modifications to this yml file to get everything to work
   * For some reason the `graphviz` package gets listed as `python-graphviz` which pip cannot find. Change the name to `graphviz`
-  * May be a one-off thing, but I had to remove the specified version in the yml file from the `pyyaml` package otherwise I encountered errors
+  * May be a one-off thing, but I had to remove the specified version in the yml file from the `pyyaml` package otherwise I encountered errors. Fine to use this strategy if you get small version conflicts on different machines.
 * Remove the problematic packages listed above entirely
 * Create the new environment from the yml file with `conda env create -f new_environment_test.yml`
 * It will prompt you to activate the new environment with `conda activate new-env-test`
@@ -48,3 +49,5 @@ See the [list of known-erroring labs here](known-to-error.md)
 
 ## Update the Environments
 The last steps are to update the [student repo](https://github.com/learn-co-curriculum/dsc-data-science-env) with the new yml files. This should be done in conjunction with updating any labs or lessons that need to be updated. Reach out to Engineering to update the environment for the in browser jupyter notebooks.
+
+There may be a handful of packages that will error as "not found" when Engineering tries to create their environment. This is likely because they are running this in a Linux environment and some packages are OS specific. They should just remove the offending packages. 
