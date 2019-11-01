@@ -56,11 +56,13 @@ pip install gitpython
 
 When setting up the alias you may also need to update your `.bash_profile` by closing and reopening terminal or running `source ~/.bash_profile`
 
+**Merge Conflicts:** During execution the script will attempt to pull the remote `master` and `solution` branches to merge into your local `master` and `solution` respectively. It then creates the new notebook, commits and pushes. The pull step is to avoid the error `Updates were rejected because the remote contains work that you do not have locally` when there were commits added to remote that you do not have locally. **If pulling results in a merge conflict, fix manually and then re-run `dscreate`** (Fix in any way that results in no conflict, your local state isn't especially important because the script will be creating a new notebook anyway).
+
 ## Style Guide
 * [Curriculm Branch Style Guide](https://docs.google.com/document/d/1YpJN9S1kzoObMyIE02OszgHdlqhRP6ktgW5S74UzbNk/edit)
 
 ## Note on Additional Files (not notebook or readme)
-Any additional files added to `curriculum` and committed will be transferred to both `master` & `solution` branches when the script is run.  If one specific branch, but not the other, needs (or doesn't need) a file, it will have to be added (or removed) to that specific branch manually. 
+Any additional files added to `curriculum` and committed will be transferred to both `master` & `solution` branches when the script is run.  If one specific branch, but not the other, needs (or doesn't need) a file, it will have to be added (or removed) to that specific branch manually.
 
 _Note: The `index_files` directory of images is deleted and then recreated when the notebook is converted to markdown on both `master` & `solution` branches each time the script runs._
 
