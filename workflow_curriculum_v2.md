@@ -8,7 +8,7 @@ Once assigned a section or brick to work on, look at the [curriculum spreadsheet
 1. See to what extent there are existing lessons
 2. Look at the "additional notes" column to look at the comments on what to change. In general, lines highlighted in blue denote that substantial changes are needed.
 
-## Step 2: Creating New Pepositories
+## Step 2: Creating New Repositories
 
 Depending on whether a lesson existed for Curriculum V1, you will 
 
