@@ -10,9 +10,19 @@ Edit the notebook file on the `curriculum` branch and run this script. That's it
 
 ### How It Works
 
+#### Labs
+
+Labs in the DS curriculum have a `solution` branch in addition to `master` and `curriculum` branches.
+
 The `curriculum` branch has two copies of every code cell. The one with no special markup goes to the `master` branch, the one with a `__SOLUTION__` tag goes to the `solution` branch.
 
 Markdown cells have only one copy, and the same content populates both `master` and `solution`.
+
+#### Lessons
+
+Lessons in the DS curriculum do not have `solution` branches. Typically if they are written using Jupyter Notebooks, they have `curriculum` and `master` branches, which are in sync with each other. In order to use this script (which automatically generates README content and includes it in GitHub), you still want to use the `curriculum` branch for development.
+
+If there is not a `curriculum` branch in the repository, this script is not applicable.
 
 ### What This Script Does
 
@@ -33,7 +43,9 @@ Follow the [same instructions that students use in Phase 1](https://github.com/l
 (If you are not on the Curriculum team, prior to this step, you should have forked the curriculum repo to your personal GitHub account.)
 
 1. Clone the repo locally and `cd` into it
-2. `git checkout solution && git checkout curriculum` to make sure that the solution branch is available locally and the curriculum branch is active
+2. Check out branch(es) locally
+   * If this is a lab, run `git checkout solution && git checkout curriculum`
+   * If this is a lesson (i.e. no `solution` branch), run `git checkout curriculum` only
 3. Run `jupyter notebook` as usual, with `learn-env` activated, and make any required changes to the notebook cells in `index.ipynb`.
    * ***Note:*** If you are editing a code cell, make sure you check both the `master` (no tag) and `solution` (`__SOLUTION__` tag) versions of the cell
 4. When you are finished making edits, restart the kernel and clear all cells, then go through and execute only the solution cells if solutions cells are present. If this is a lesson without a separate solution (i.e. not a "lab"), you can just run all cells.
