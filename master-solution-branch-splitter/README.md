@@ -69,7 +69,7 @@ You also need to have [SSH auth set up for GitHub](https://docs.github.com/en/au
 The general usage is
 
 ```
-python -m "commit message" path/to/script
+python path/to/script -m "commit message"
 ```
 
 executed from the root of the repository you are editing.
@@ -79,7 +79,7 @@ The script is located within the [dsc-curriculum-guidelines](https://github.com/
 So, for example, you might run
 
 ```bash
-python -m "fix typo" ~/Desktop/dsc-curriculum-guidelines/master-solution-branch-splitter/index.py
+python ~/Desktop/dsc-curriculum-guidelines/master-solution-branch-splitter/index.py -m "fix typo"
 ```
 
 #### Example Usage Video
@@ -92,7 +92,7 @@ python -m "fix typo" ~/Desktop/dsc-curriculum-guidelines/master-solution-branch-
 To create an alias so you do not need to type the full path to the file every time, add the following to you `.bash_profile`. (Replace the example path with the path to your local file)
 
 ```bash
-alias dscreate="python /Users/alex/Development/DS/dsc-curriculum-guidelines/master-solution-branch-splitter/index.py"
+alias dscreate="/Users/<username>/.conda/envs/branchsplit/bin/python /Users/<username>/Development/DS/dsc-curriculum-guidelines/master-solution-branch-splitter/index.py"
 ```
 
 When setting up the alias you may also need to update your `.bash_profile` by closing and reopening terminal or running `source ~/.bash_profile`
