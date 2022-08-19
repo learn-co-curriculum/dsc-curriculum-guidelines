@@ -6,8 +6,8 @@ import re
 # ACTION REQUIRED: Edit these to be the names of the appropriate directories
 # LOG_DIR = make an empty directory where the log files will be created
 # CURR_DIR = wherever your local copies of all labs live
-LOG_DIR = "currlogs"
-CURR_DIR = "dsv2"
+LOG_DIR = "curriculum_log"
+CURR_DIR = "curriculum"
 
 # ACTION REQUIRED: update these paths as appropriate
 # the provided default assumes this script will be run from
