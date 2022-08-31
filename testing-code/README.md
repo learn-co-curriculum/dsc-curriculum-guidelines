@@ -56,14 +56,14 @@ This step uses the [`error_log.py`](error_log.py) Python script. The logic of th
 1. Check out the appropriate branch
    * If there is a `solution` branch, use that
    * If not, if there is a `curriculum` branch, use that
-2. Execute all of the code in `index.ipynb` by running `jupyter nbconvert -- execute`, and write the output of this code execution to a file named `curriculum_log/<repo name>.txt`
-   * If there is an error, it will be written to that `.txt` file and should _not_ cause `error_log.py` to crash
+2. Execute all of the code in `index.ipynb` by running `jupyter nbconvert --execute`, and write the output of this code execution to a file named `curriculum_log/<repo name>.txt`
+   * If there is an error in the `index.ipynb` code, it will be written to that `.txt` file and should _not_ cause `error_log.py` to crash
 3. If there are no problems, delete the log file
-   * If the log ends with the pattern `\[NbConvertApp\] Writing [0-9]+ bytes to index.ipynb` then that is considered a successful execution and the log file will be deleted. (This means that only errors, not warnings, are considered to be actual problems.)
+   * If the log file content ends with the pattern `\[NbConvertApp\] Writing [0-9]+ bytes to index.ipynb` then that is considered a successful execution and the log file will be deleted. (This means that only errors, not warnings, are considered to be actual problems.)
    * If the lesson is known to error, the log file also will be deleted
      * In some cases the lessons intentionally have errors in order to teach students something
      * In other cases it's more an issue of our testing setup not being sophisticated enough. For example, if there is user input involved, or the lesson requires an API key, that is going to crash every if you run it as-is with `jupyter nbconvert -- execute`. These lessons should probably be spot-checked periodically but for now the script ignores them.
-4. Prints out the list of lessons that still have a log file (i.e. have a problem)
+4. Print out the list of lessons that still have a log file (i.e. have a problem)
 
 <sup>1</sup>(More precisely, it actually does one loop for step 2, another for step 3, and another for step 4. So you could easily comment out the later steps without digging into the script logic.)
 
@@ -81,19 +81,22 @@ For example, if you cloned this repository in `~/Development/DS/` then the full 
 python ~/Development/DS/testing-code/error_log.py
 ```
 
+The only package dependency you should need is `pandas`.
+
 ***This will take a long time (3+ hours) to run for the entire curriculum.***
 
-## Confirm that you have all the packages you need to.
-In the [learn environment we ask students to use](https://github.com/learn-co-curriculum/dsc-data-science-env), a handful of packages are specifically left out. This is mostly becuase these can often cause problems when installing and we'd rather not frontload all these issues in the student experience. Also, they are only used in a few labs. [See more info on the specific packages here](https://docs.google.com/document/d/1io_-mqILBstaDNEwyovwrS9TIHvLMP6bEpk_oOb88hc/edit?usp=sharing)
+## Spot Checking "Known to Error" Lessons
 
-To make sure you have these correctly installed run the `package_check.py` file in this directory and confirm that there are no errors, `pip install` the appropriate packages until everything is installed. _Note:_ This list may not be comprehensive, if things are missing, add to it!
+Some lessons will produce errors for some other reason than incompatibility with the environment. These are documented in the `known_to_error.csv` file. The script automatically skips over reporting errors in these lessons.
 
-## Check against known-to-error lessons
-The list you created should be checked against a list of lessons that are known to error. Lessons could legitimately be designed to error for several reasons:
-* It's a lesson that is teaching you about when to expect errors
-* The lesson requires the student to do something that can't be replicated in the test environment (ie enter user input, paste in an API key, etc)
-* The lesson includes cells that take _very_ long to execute and may timeout.
+It is still a good idea to spot check these lessons periodically to make sure that the observed errors are the ones that are expected.
 
-You may still want to spot-check a few of the known-to-error lessons. For example, you could confirm that for a lesson that is known to timeout, the error you received was actually a `TimeoutError: Cell execution timed out`
+## Appendix: Package Check
 
-See the [list of known-erroring labs here](known-to-error.md)
+If you are updating the `conda` environment and just want to run a quick check rather than downloading all of the curriculum, you can use the `package_check.py` file. This just attempts to **import** a bunch of packages that are used in the curriculum. It does _not_ actually test any of the classes or functions in those packages, so this is not a substitute for testing the actual curriculum code.
+
+Usage:
+
+```bash
+python package_check.py
+```

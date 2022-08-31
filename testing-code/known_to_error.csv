@@ -1,0 +1,77 @@
+slug,reason,documented,notes
+als-recommender-system-pyspark-lab,Timeout,2019,
+dsc-apis-lab,User action required,2022,api key
+dsc-aws-s3,User action required,2022,aws config
+dsc-building-a-cnn-from-scratch,Timeout,2019,
+dsc-classes-and-instances,Error for teaching purposes,2019,
+dsc-classification-with-word-embeddings-codealong,User action required,2019,unzip
+dsc-convolutional-neural-networks-codealong,Error for teaching purposes,2019,
+dsc-creating-functions,Error for teaching purposes,2019,
+dsc-curse-of-dimensionality-lab,Timeout,2019,
+dsc-database-admin-101,Error for teaching purposes,2019,
+dsc-database-admin-101-lab,Error for teaching purposes,2019,
+dsc-deeper-neural-networks-lab,Timeout,2019,
+dsc-file-io,Error for teaching purposes,2022,
+dsc-filtering-v2-4,Error for teaching purposes,2022,
+dsc-first-codealong,Error for teaching purposes,2019,
+dsc-flask-deployment,User action required,2022,start flask server
+dsc-floats-ints-booleans,Error for teaching purposes,2019,
+dsc-functions-with-arguments,Error for teaching purposes,2019,
+dsc-gaussian-naive-bayes-lab,Timeout,2019,
+dsc-generating-word-embeddings-lab,User action required,2019,unzip
+dsc-getting-started-with-numpy,Error for teaching purposes,2019,
+dsc-graph-theory-shortest-path,Error for teaching purposes,2019,
+dsc-image-classification-lab,User action required,2019,download
+dsc-implementing-recommender-systems,User action required,2022,download dataset from surprise
+dsc-implementing-recommender-systems-lab,Timeout,2019,
+dsc-importing-data-using-pandas,Error for teaching purposes,2019,
+dsc-importing-data-using-pandas-lab,Error for teaching purposes,2019,
+dsc-instance-methods,Error for teaching purposes,2019,
+dsc-introduction-to-keras-lab,Timeout,2019,
+dsc-introduction-to-neural-networks-lab,Timeout,2019,
+dsc-introduction-to-numpy,Error for teaching purposes,2019,
+dsc-kernels-in-scikit-learn-lab,Timeout,2019,
+dsc-learn-lessons,Error for teaching purposes,2019,
+dsc-lists,Error for teaching purposes,2019,
+dsc-logistic-regression-model-comparisons-lab,Timeout,2022,
+dsc-looping-over-collections,Error for teaching purposes,2019,
+dsc-machine-learning-with-spark-lab,Timeout,2019,
+dsc-machine-learning-with-spark-v2-4,Timeout,2022,
+dsc-mle,User action required,2019,input
+dsc-mod-2-lab,User action required,2019,http req fails
+dsc-mongodb,User action required,2019,start mongodb
+dsc-mongodb-lab,User action required,2019,start mongodb
+dsc-monte-carlo-simulations-lab,Timeout,2019,
+dsc-more-practice-with-matplotlib,Error for teaching purposes,2022,
+dsc-network-recommendation-systems,Timeout,2019,
+dsc-object-initialization,Error for teaching purposes,2019,
+dsc-pandas-series-and-dataframes,Error for teaching purposes,2019,
+dsc-pca-and-digital-image-processing,Timeout,2019,
+dsc-pca-and-digital-image-processing-lab,Timeout,2019,
+dsc-pca-and-pipelines-v2-1,Timeout,2022,
+dsc-PEP8,Error for teaching purposes,2019,
+dsc-pipelines-lab,Timeout,2019,
+dsc-prework-jupyter-notebook,Error for teaching purposes,2022,
+dsc-productionizing-models-with-sagemaker,User action required,2019,aws config
+dsc-project-building-a-calculator,User action required,2019,input
+dsc-python-loops-and-functions-lab,User action required,2022,input
+dsc-python-operators-functions-and-methods,Error for teaching purposes,2019,
+dsc-reading-api-documentation,User action required,2019,api key
+dsc-recursive-functions,Error for teaching purposes,2019,
+dsc-regression-boston-lab,User action required,2019,input
+dsc-resampling-methods-lab,Timeout,2019,
+dsc-scraping-concerts-lab,Error for teaching purposes,2022,
+dsc-sklearn-preprocessing,Error for teaching purposes,2022,
+dsc-spark-docker-installation,Timeout,2022,
+dsc-sparkcontext-lab,Error for teaching purposes,2019,
+dsc-strings,Error for teaching purposes,2019,
+dsc-tuning-neural-networks-from-start-to-finish-lab,Timeout,2019,
+dsc-tuning-neural-networks-from-start-to-finish-lab-v2-1,Timeout,2022,
+dsc-tuning-neural-networks-with-regularization-lab,Timeout,2019,
+dsc-tuning-neural-networks-with-regularization-lab-v2-1,Timeout,2022,
+dsc-user-input-and-output-in-python,User action required,2019,input
+dsc-using-pretrained-networks-codealong,Timeout,2019,
+dsc-using-yelp-api-codealong,User action required,2019,api key
+dsc-variable-assignment-intro,Error for teaching purposes,2019,
+dsc-working-with-known-json-schemas,Error for teaching purposes,2022,
+dsc-yelp-api-lab,User action required,2019,api key

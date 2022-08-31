@@ -1,9 +1,10 @@
 import cvxpy
 import scs
-import fbprophet
+import prophet
 import surprise
 import nltk
+import pandas as pd
+import sklearn
+import tensorflow
 
-nltk.download('averaged_perceptron_tagger')
-nltk.download('gutenberg')
-nltk.download('stopwords')
+print("imports executed successfully")
