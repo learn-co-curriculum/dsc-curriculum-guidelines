@@ -55,9 +55,10 @@ Codealongs are fairly rare and fairly quirky within the curriculum. They might b
 
 One technique you can use to hide the solution but keep it reasonably accessible is to use an HTML `<details>` element in a Markdown cell. This element is used in a lot of menus online, and lets you toggle whether content is expanded or collapsed. A general template for this element is:
 
-```html
+---
+
 <details>
-    <summary style="cursor: pointer"><b>Hints (click to reveal)</b></summary>
+    <summary style="cursor: pointer"><b>Hint (click to reveal)</b></summary>
     
 If you leave a blank space above and below (separating the internal content from the HTML), ***Markdown styling*** will work, including for code blocks. Pretty cool!
 
@@ -66,7 +67,10 @@ int x = 5
 ```
     
 </details>
-```
+
+---
+
+(You can copy the code above by viewing the raw source of this Markdown page.)
 
 You'll also often see a `---` above or below a `<details>` tag. This is a "horizontal rule" (AKA `<hr>` tag in HTML) that is normally used for a "thematic break" in technical writing, but it also can just be a nice way to add some vertical space if the `<details>` tag is looking too crowded.
 
