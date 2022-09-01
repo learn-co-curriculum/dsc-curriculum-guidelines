@@ -3,11 +3,15 @@ als-recommender-system-pyspark-lab,Timeout,2019,
 dsc-apis-lab,User action required,2022,api key
 dsc-aws-s3,User action required,2022,aws config
 dsc-building-a-cnn-from-scratch,Timeout,2019,
+dsc-class-imbalance-problems-lab,Timeout,2022,
 dsc-classes-and-instances,Error for teaching purposes,2019,
 dsc-classification-with-word-embeddings-codealong,User action required,2019,unzip
+dsc-coding-logistic-regression-from-scratch,Timeout,2022,
 dsc-convolutional-neural-networks-codealong,Error for teaching purposes,2019,
 dsc-creating-functions,Error for teaching purposes,2019,
 dsc-curse-of-dimensionality-lab,Timeout,2019,
+dsc-dash-deployment,User action required,2022,use different env
+dsc-dash-intro,User action required,2022, use different env
 dsc-database-admin-101,Error for teaching purposes,2019,
 dsc-database-admin-101-lab,Error for teaching purposes,2019,
 dsc-deeper-neural-networks-lab,Timeout,2019,
@@ -33,6 +37,7 @@ dsc-introduction-to-numpy,Error for teaching purposes,2019,
 dsc-kernels-in-scikit-learn-lab,Timeout,2019,
 dsc-learn-lessons,Error for teaching purposes,2019,
 dsc-lists,Error for teaching purposes,2019,
+dsc-logistic-regression-lab,Timeout,2022,
 dsc-logistic-regression-model-comparisons-lab,Timeout,2022,
 dsc-looping-over-collections,Error for teaching purposes,2019,
 dsc-machine-learning-with-spark-lab,Timeout,2019,
@@ -60,6 +65,7 @@ dsc-reading-api-documentation,User action required,2019,api key
 dsc-recursive-functions,Error for teaching purposes,2019,
 dsc-regression-boston-lab,User action required,2019,input
 dsc-resampling-methods-lab,Timeout,2019,
+dsc-sarima-models-lab,Timeout,2022,
 dsc-scraping-concerts-lab,Error for teaching purposes,2022,
 dsc-sklearn-preprocessing,Error for teaching purposes,2022,
 dsc-spark-docker-installation,Timeout,2022,
