@@ -105,6 +105,10 @@ If you don't specify a **commit message**, the script will pull the most recent 
 
 It does not matter which changes are staged; **the script will `git add` everything currently present in the repo you are editing**. If you need to have some file locally that you don't want committed to GitHub, you will need to modify the `.gitignore`.
 
+#### Note on `jupyter_contrib_nbextensions`
+
+If you run into errors saying `ModuleNotFoundError: No module named 'jupyter_contrib_nbextensions'` double check that you're on the `branchsplit` conda environment. If you continue to have these errors (which will manifest as the README.md file not generating correctly), run `conda install -c conda-forge jupyter_contrib_nbextensions` in the `branchsplit` environment, then try again.
+
 ### Note on Additional Files (Not Notebook or README)
 
 Any additional files added to `curriculum` and committed will be transferred to both `master` & `solution` branches when the script is run.  If one specific branch, but not the other, needs (or doesn't need) a file, it will have to be added (or removed) to that specific branch manually. 
