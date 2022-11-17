@@ -114,7 +114,7 @@ Regardless of whether the lesson is written in the `index.ipynb` or `README.md` 
    - Write in complete sentences, introducing the lesson
    - If possible try to avoid making explicit statements about the sequence of the curriculum, e.g. mentioning that they "just" did a particular lab. It's fine to connect back to something that is a prerequisite for understanding the lesson
 3. Objectives
-   - This comes immediately after the objectives, with `## ` in front of it
+   - This comes immediately after the introduction, with `## ` in front of it
    - Make sure you leave a blank line above and below the list of objectives. This will help the `github-to-canvas` gem parse the lesson header appropriately
    - Each SWBAT in the list should start with a verb and should not be a complete sentence
    - Objectives should also be entered into Airtable. A single objective can be linked to multiple lessons if appropriate
