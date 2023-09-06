@@ -139,6 +139,14 @@ Git().custom_environment(GIT_SSH_COMMAND=git_ssh_cmd)
 
 repo = Repo(os.getcwd())
 
+# handling for updated main branch naming convention ensuring correct branch name
+try:
+    repo.git.checkout('main')
+    MASTER_BRANCH = 'main'
+except GitCommandError:
+    print('The main branch is not named "main"')
+    MASTER_BRANCH = 'master'
+
 try:
     repo.git.checkout(CURRICULUM_BRANCH)
 except GitCommandError:
