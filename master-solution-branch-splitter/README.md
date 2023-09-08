@@ -82,11 +82,6 @@ So, for example, you might run
 python ~/Desktop/dsc-curriculum-guidelines/master-solution-branch-splitter/index.py -m "fix typo"
 ```
 
-#### Example Usage Video
-
-[Here is a short (4 minute) video demonstrating the use of the tool](https://www.youtube.com/watch?v=p95VAaC0Gbg&feature=youtu.be)
-
-
 #### Setting Up an Alias
 
 To create an alias so you do not need to type the full path to the file every time, add the following to you `.bash_profile`. (Replace the example path with the path to your local file)
